@@ -1,7 +1,7 @@
   .content-section {
-      padding: 6rem 2rem;
+      padding: 10vh 2rem;
       background: #ffffff;
-      height: 75vh;
+      height: 100vh;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -52,7 +52,7 @@
       flex: 1;
       overflow: hidden;
       animation: fadeInScale 0.8s ease-out;
-      max-height: calc(75vh - 12rem);
+      max-height: calc(100vh - 20vh);
       display: flex;
       align-items: center;
   }
@@ -104,13 +104,13 @@
 
   @media (max-width: 768px) {
       .content-section {
-          padding: 3.5rem 1.5rem;
-          height: 75vh;
+          padding: 10vh 1.5rem;
+          height: 100vh;
           margin: 2rem 0;
       }
 
       .section-image {
-          max-height: calc(75vh - 7rem);
+          max-height: calc(100vh - 20vh);
       }
 
       .section-container {
