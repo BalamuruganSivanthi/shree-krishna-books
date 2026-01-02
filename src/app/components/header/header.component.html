@@ -1,0 +1,12 @@
+<header class="header">
+    <div class="header-content">
+        <div class="logo">VenbaA</div>
+        <nav class="navigation">
+            <a routerLink="/" [class.active]="currentPage === 'home'">Home</a>
+            <a href="#" class="nav-link">Notebooks</a>
+            <a href="#" class="nav-link">Pens</a>
+            <a href="#" class="nav-link">Office Supplies</a>
+            <a (click)="scrollToSection('about')" class="nav-link scroll-link">About Us</a>
+        </nav>
+    </div>
+</header>
