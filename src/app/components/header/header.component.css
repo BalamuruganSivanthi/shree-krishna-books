@@ -18,6 +18,13 @@
       align-items: center;
   }
 
+  .logo-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      line-height: 1;
+  }
+
   .logo {
       font-family: 'Georgia', serif;
       font-size: 1.8rem;
@@ -25,6 +32,15 @@
       letter-spacing: 0.15em;
       color: #1a1a1a;
       text-transform: uppercase;
+  }
+
+  .tagline {
+      font-family: 'Segoe UI', 'Helvetica Neue', sans-serif;
+      font-size: 1.05rem;
+      letter-spacing: 0.2em;
+      color: #666;
+      text-transform: lowercase;
+      margin-top: 5px;
   }
 
   .navigation {
