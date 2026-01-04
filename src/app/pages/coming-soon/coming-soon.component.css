@@ -1,0 +1,60 @@
+.coming-soon-page {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #ffffff;
+    padding: 2rem;
+    text-align: center;
+}
+
+.content {
+    max-width: 600px;
+    animation: fadeIn 0.8s ease-out;
+}
+
+h1 {
+    font-family: 'Georgia', serif;
+    font-size: 3rem;
+    color: #1a1a1a;
+    margin-bottom: 1.5rem;
+}
+
+p {
+    font-family: 'Segoe UI', 'Helvetica Neue', sans-serif;
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+.back-btn {
+    display: inline-block;
+    margin-top: 2rem;
+    padding: 0.8rem 2rem;
+    background: #1a1a1a;
+    color: #fff;
+    text-decoration: none;
+    font-family: 'Segoe UI', 'Helvetica Neue', sans-serif;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    transition: all 0.3s ease;
+}
+
+.back-btn:hover {
+    background: #333;
+    transform: translateY(-2px);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

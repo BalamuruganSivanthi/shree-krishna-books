@@ -7,8 +7,8 @@
         <nav class="navigation">
             <a routerLink="/" [class.active]="currentPage === 'home'">Home</a>
             <a routerLink="/notebooks" routerLinkActive="active" class="nav-link">Notebooks</a>
-            <a href="#" class="nav-link">Pens</a>
-            <a href="#" class="nav-link">Office Supplies</a>
+            <a routerLink="/pens" routerLinkActive="active" class="nav-link">Pens</a>
+            <a routerLink="/office-supplies" routerLinkActive="active" class="nav-link">Office Supplies</a>
             <a (click)="scrollToSection('footer')" class="nav-link scroll-link">About Us</a>
         </nav>
     </div>
