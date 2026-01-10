@@ -58,10 +58,11 @@
                 <div class="option-group">
                     <label>Quantity</label>
                     <div class="quantity-selector">
-                        <button (click)="quantity = quantity > 1 ? quantity - 1 : 1">-</button>
-                        <input type="number" [(ngModel)]="quantity" min="1">
+                        <button (click)="quantity = quantity > 100 ? quantity - 1 : 100">-</button>
+                        <input type="number" [(ngModel)]="quantity" min="100">
                         <button (click)="quantity = quantity + 1">+</button>
                     </div>
+                    <p class="help-text">Minimum order: 100 pieces</p>
                 </div>
             </div>
 

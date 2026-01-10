@@ -26,7 +26,7 @@ export class OrderComponent implements OnInit {
   selectedSize: string = '';
   selectedPaper: string = '';
   selectedCover: string = '';
-  quantity: number = 1;
+  quantity: number = 100;
   activeImage: string = '';
 
   // Mock data - in a real app this would come from a service
