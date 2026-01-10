@@ -92,14 +92,10 @@ export class OrderComponent implements OnInit {
     this.activeImage = image;
   }
 
-  addToCart() {
-    console.log('Added to cart:', {
-      product: this.product?.name,
-      size: this.selectedSize,
-      paper: this.selectedPaper,
-      cover: this.selectedCover,
-      quantity: this.quantity
-    });
-    alert('Product added to cart!');
+  contactToOrder() {
+    const footer = document.getElementById('footer');
+    if (footer) {
+      footer.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
   }
 }
