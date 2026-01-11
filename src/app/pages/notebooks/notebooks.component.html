@@ -6,66 +6,19 @@
     </div>
 
     <div class="products-grid">
-        <!-- Product 1 -->
-        <div class="product-card" [routerLink]="['/order', 'classic-notebook']">
+        <div class="product-card" *ngFor="let product of products" [routerLink]="['/order', product.id]">
             <div class="product-image">
-                <img src="../../../assets/long-note-sqare-final.png" alt="Classic Case Bound School Notebook">
+                <img [src]="product.images[0]" [alt]="product.name">
             </div>
             <div class="product-info">
-                <h3>Classic Case Bound School Notebook</h3>
+                <h3>{{ product.name }}</h3>
                 <div class="product-specs">
-                    <p><strong>Sizes:</strong> Long Book, King Size</p>
-                    <p><strong>Paper:</strong> Ruled, Unruled, 4 Line</p>
-                    <p><strong>Cover:</strong> Hard Cover, Water Proof</p>
+                    <p><strong>Sizes:</strong> {{ product.sizes.join(', ') }}</p>
+                    <p><strong>Paper:</strong> {{ product.paperTypes.join(', ') }}</p>
+                    <p><strong>Cover:</strong> {{ product.coverTypes.join(', ') }}</p>
                 </div>
-                <p class="price">₹1,299</p>
-                <button class="add-btn">View Details</button>
-            </div>
-        </div>
-
-        <!-- Product 2 -->
-        <div class="product-card" [routerLink]="['/order', 'spiral-notebook']">
-            <div class="product-image">
-                <img src="../../../assets/long-book-wirebound-final.png" alt="Spiral Bound Notebooks">
-            </div>
-            <div class="product-info">
-                <h3>Spiral Bound Notebooks</h3>
-                <div class="product-specs">
-                    <p><strong>Sizes:</strong> A4, A5</p>
-                    <p><strong>Paper:</strong> One Line, Unruled</p>
-                    <p><strong>Cover:</strong> Soft Cover, Plastic</p>
-                </div>
-                <p class="price">₹899</p>
-                <button class="add-btn">View Details</button>
-            </div>
-        </div>
-
-        <!-- Product 3 -->
-        <!--<div class="product-card">
-            <div class="product-image">
-                <img src="https://images.pexels.com/photos/733857/pexels-photo-733857.jpeg?auto=compress&cs=tinysrgb&w=800"
-                    alt="Artist Sketchbook">
-            </div>
-            <div class="product-info">
-                <h3>Artist Sketchbook</h3>
-                <p class="price">₹1,499</p>
-                <button class="add-btn">View Details</button>
-            </div>
-        </div>-->
-
-        <!-- Product 4 -->
-        <div class="product-card" [routerLink]="['/order', 'executive-planner']">
-            <div class="product-image">
-                <img src="../../../assets/planner-1.png" alt="Executive Planner">
-            </div>
-            <div class="product-info">
-                <h3>Executive Planner</h3>
-                <div class="product-specs">
-                    <p><strong>Sizes:</strong> A5, B5</p>
-                    <p><strong>Paper:</strong> Planner Layout</p>
-                    <p><strong>Cover:</strong> Leather, Hard Cover</p>
-                </div>
-                <p class="price">₹1,199</p>
+                <p class="price" *ngIf="product.price > 0">₹{{ product.price | number }}</p>
+                <p class="price" *ngIf="product.price === 0">Contact Us for Pricing</p>
                 <button class="add-btn">View Details</button>
             </div>
         </div>
