@@ -92,10 +92,47 @@ export class OrderComponent implements OnInit {
     this.activeImage = image;
   }
 
+  // Modal state
+  showModal: boolean = false;
+  customerName: string = '';
+  customerEmail: string = '';
+  customerPhone: string = '';
+
   contactToOrder() {
-    const footer = document.getElementById('footer');
-    if (footer) {
-      footer.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    this.showModal = true;
+  }
+
+  closeModal() {
+    this.showModal = false;
+  }
+
+  submitInquiry() {
+    if (!this.product) return;
+
+    if (!this.customerName || !this.customerEmail || !this.customerPhone) {
+      alert('Please fill in all details');
+      return;
     }
+
+    const subject = `Order Inquiry: ${this.product.name}`;
+    const body = `Hello,
+
+I am interested in ordering the following:
+Product: ${this.product.name}
+Size: ${this.selectedSize}
+Paper Type: ${this.selectedPaper}
+Cover Type: ${this.selectedCover}
+Quantity: ${this.quantity}
+
+My Contact Details:
+Name: ${this.customerName}
+Email: ${this.customerEmail}
+Phone: ${this.customerPhone}
+
+Please get back to me regarding pricing and availability.`;
+
+    const mailtoLink = `mailto:shreekrishnabookswpt@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    window.open(mailtoLink, '_blank');
+    this.closeModal();
   }
 }
