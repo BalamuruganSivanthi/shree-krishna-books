@@ -177,3 +177,13 @@
         gap: 2rem;
     }
 }
+
+.contact-pricing {
+    font-family: 'Georgia', serif;
+    font-style: italic;
+    font-weight: 500;
+    font-size: 1.2rem;
+    color: #d9534f;
+    /* A subtle distinct color, or just keep it dark? Let's stick to theme but distinct style */
+    color: #333;
+}

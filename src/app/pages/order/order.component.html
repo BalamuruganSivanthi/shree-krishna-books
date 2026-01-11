@@ -19,7 +19,7 @@
         <div class="product-details">
             <h1 class="product-title">{{ product.name }}</h1>
             <p class="product-price" *ngIf="product.price > 0">₹{{ product.price }}</p>
-            <p class="product-price" *ngIf="product.price === 0">Contact Us for Pricing</p>
+            <p class="product-price contact-pricing" *ngIf="product.price === 0">Contact Us for Pricing</p>
 
             <div class="product-description">
                 <p>{{ product.description }}</p>

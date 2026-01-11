@@ -342,3 +342,11 @@
 .submit-btn:hover {
     background: #333;
 }
+
+.contact-pricing {
+    font-family: 'Georgia', serif;
+    font-style: italic;
+    font-weight: 500;
+    font-size: 1.5rem;
+    color: #333;
+}
