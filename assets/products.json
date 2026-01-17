@@ -1,0 +1,69 @@
+[
+    {
+        "id": "classic-notebook",
+        "name": "Classic Case Bound School Notebookasdfasdf",
+        "price": 0,
+        "description": "Experience the perfect blend of tradition and quality with our Classic Case Bound School Notebook. Designed for students who appreciate durability and a premium writing experience.",
+        "images": [
+            "../../../assets/long-note-sqare-final.png",
+            "../../../assets/ruled-type-and-index.png",
+            "https://images.pexels.com/photos/6373305/pexels-photo-6373305.jpeg?auto=compress&cs=tinysrgb&w=800"
+        ],
+        "sizes": [
+            "Long Book",
+            "King Size"
+        ],
+        "paperTypes": [
+            "Ruled",
+            "Unruled",
+            "4 Line"
+        ],
+        "coverTypes": [
+            "Hard Cover",
+            "Water Proof"
+        ]
+    },
+    {
+        "id": "spiral-notebook",
+        "name": "Spiral Bound Notebooks",
+        "price": 0,
+        "description": "Flexible, durable, and ready for your ideas. Our Spiral Bound Notebooks lay flat for easy writing and are perfect for quick notes, sketches, and classroom work.",
+        "images": [
+            "../../../assets/long-book-wirebound-final.png",
+            "https://images.pexels.com/photos/5088017/pexels-photo-5088017.jpeg?auto=compress&cs=tinysrgb&w=800"
+        ],
+        "sizes": [
+            "A4",
+            "A5"
+        ],
+        "paperTypes": [
+            "One Line",
+            "Unruled"
+        ],
+        "coverTypes": [
+            "Soft Cover",
+            "Plastic"
+        ]
+    },
+    {
+        "id": "executive-planner",
+        "name": "Executive Planner",
+        "price": 0,
+        "description": "Organize your life with elegance. The Executive Planner features a sophisticated layout designed for professionals who need to stay on top of their game.",
+        "images": [
+            "../../../assets/planner-1.png",
+            "https://images.pexels.com/photos/5405596/pexels-photo-5405596.jpeg?auto=compress&cs=tinysrgb&w=800"
+        ],
+        "sizes": [
+            "A5",
+            "B5"
+        ],
+        "paperTypes": [
+            "Planner Layout"
+        ],
+        "coverTypes": [
+            "Leather",
+            "Hard Cover"
+        ]
+    }
+]
