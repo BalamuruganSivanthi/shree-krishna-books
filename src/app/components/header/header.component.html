@@ -1,0 +1,15 @@
+<header class="header">
+    <div class="header-content">
+        <div class="logo-container">
+            <div class="logo">VenbaA</div>
+            <div class="tagline">Shree Krishna Books</div>
+        </div>
+        <nav class="navigation">
+            <a routerLink="/" (click)="scrollToTop()" [class.active]="currentPage === 'home'">Home</a>
+            <a routerLink="/notebooks" routerLinkActive="active" class="nav-link">Notebooks</a>
+            <a routerLink="/pens" routerLinkActive="active" class="nav-link">Pens</a>
+            <a routerLink="/office-supplies" routerLinkActive="active" class="nav-link">Office Supplies</a>
+            <a (click)="scrollToSection('footer')" class="nav-link scroll-link">About Us</a>
+        </nav>
+    </div>
+</header>

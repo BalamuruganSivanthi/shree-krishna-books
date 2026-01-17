@@ -1,0 +1,130 @@
+  .content-section {
+      padding: 10vh 2rem;
+      background: #ffffff;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-sizing: border-box;
+      margin: 3rem 0;
+  }
+
+  .content-section.full-width {
+      padding: 0;
+  }
+
+  .content-section.about-section {
+      background: #fafaf8;
+  }
+
+  .section-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      gap: 4rem;
+  }
+
+  .section-container.has-image.image-left {
+      flex-direction: row;
+  }
+
+  .section-container.has-image.image-right {
+      flex-direction: row-reverse;
+  }
+
+  .section-text {
+      flex: 1;
+      animation: fadeIn 0.8s ease-out;
+  }
+
+  @keyframes fadeIn {
+      from {
+          opacity: 0;
+      }
+
+      to {
+          opacity: 1;
+      }
+  }
+
+  .section-image {
+      flex: 1;
+      overflow: hidden;
+      animation: fadeInScale 0.8s ease-out;
+      max-height: calc(100vh - 20vh);
+      display: flex;
+      align-items: center;
+  }
+
+  @keyframes fadeInScale {
+      from {
+          opacity: 0;
+          transform: scale(0.95);
+      }
+
+      to {
+          opacity: 1;
+          transform: scale(1);
+      }
+  }
+
+  .section-image img {
+      width: 100%;
+      height: auto;
+      max-height: 100%;
+      display: block;
+      object-fit: contain;
+  }
+
+  .section-title {
+      font-family: 'Georgia', serif;
+      font-size: 2.5rem;
+      font-weight: 400;
+      color: #1a1a1a;
+      margin: 0 0 1.5rem 0;
+      letter-spacing: -0.01em;
+      line-height: 1.2;
+  }
+
+  .section-description {
+      font-family: 'Segoe UI', 'Helvetica Neue', sans-serif;
+      font-size: 1.05rem;
+      line-height: 1.8;
+      color: #555;
+  }
+
+  .section-description p {
+      margin: 0 0 1.5rem 0;
+  }
+
+  .section-description p:last-child {
+      margin-bottom: 0;
+  }
+
+  @media (max-width: 768px) {
+      .content-section {
+          padding: 10vh 1.5rem;
+          height: 100vh;
+          margin: 2rem 0;
+      }
+
+      .section-image {
+          max-height: calc(100vh - 20vh);
+      }
+
+      .section-container {
+          flex-direction: column !important;
+          gap: 2rem;
+      }
+
+      .section-title {
+          font-size: 1.8rem;
+          margin-bottom: 1rem;
+      }
+
+      .section-description {
+          font-size: 0.95rem;
+          line-height: 1.7;
+      }
+  }

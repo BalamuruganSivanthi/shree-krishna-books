@@ -1,0 +1,108 @@
+<div class="order-page" *ngIf="product; else notFound">
+    <div class="header-spacer"></div>
+
+    <div class="product-container">
+        <!-- Left Column: Images -->
+        <div class="product-gallery">
+            <div class="main-image">
+                <img [src]="activeImage" [alt]="product.name">
+            </div>
+            <div class="thumbnail-list">
+                <div class="thumbnail" *ngFor="let img of product.images" [class.active]="activeImage === img"
+                    (click)="setImage(img)">
+                    <img [src]="img" [alt]="product.name">
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Column: Details & Order Form -->
+        <div class="product-details">
+            <h1 class="product-title">{{ product.name }}</h1>
+            <p class="product-price" *ngIf="product.price > 0">₹{{ product.price }}</p>
+            <p class="product-price contact-pricing" *ngIf="product.price === 0">Contact Us for Pricing</p>
+
+            <div class="product-description">
+                <p>{{ product.description }}</p>
+            </div>
+
+            <div class="order-options">
+                <div class="option-group">
+                    <label>Size</label>
+                    <div class="option-buttons">
+                        <button *ngFor="let size of product.sizes" [class.selected]="selectedSize === size"
+                            (click)="selectedSize = size">
+                            {{ size }}
+                        </button>
+                    </div>
+                </div>
+
+                <div class="option-group">
+                    <label>Paper Type</label>
+                    <div class="option-buttons">
+                        <button *ngFor="let paper of product.paperTypes" [class.selected]="selectedPaper === paper"
+                            (click)="selectedPaper = paper">
+                            {{ paper }}
+                        </button>
+                    </div>
+                </div>
+
+                <div class="option-group">
+                    <label>Cover Type</label>
+                    <div class="option-buttons">
+                        <button *ngFor="let cover of product.coverTypes" [class.selected]="selectedCover === cover"
+                            (click)="selectedCover = cover">
+                            {{ cover }}
+                        </button>
+                    </div>
+                </div>
+
+                <div class="option-group">
+                    <label>Quantity</label>
+                    <div class="quantity-selector">
+                        <button (click)="quantity = quantity > 100 ? quantity - 1 : 100">-</button>
+                        <input type="number" [(ngModel)]="quantity" min="100">
+                        <button (click)="quantity = quantity + 1">+</button>
+                    </div>
+                    <p class="help-text">Minimum order: 100 pieces</p>
+                </div>
+            </div>
+
+            <button class="add-to-cart-btn" (click)="contactToOrder()">Contact to Order</button>
+        </div>
+        <!-- Inquiry Modal -->
+        <div class="modal-overlay" *ngIf="showModal" (click)="closeModal()">
+            <div class="modal-content" (click)="$event.stopPropagation()">
+                <button class="close-btn" (click)="closeModal()">&times;</button>
+                <h2>Contact Details</h2>
+                <p>Please provide your details so we can assist you with your order.</p>
+
+                <div class="form-group">
+                    <label>Name</label>
+                    <input type="text" [(ngModel)]="customerName" placeholder="Your Name">
+                </div>
+
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="email" [(ngModel)]="customerEmail" placeholder="Your Email">
+                </div>
+
+                <div class="form-group">
+                    <label>Phone Number</label>
+                    <input type="tel" [(ngModel)]="customerPhone" placeholder="Your Phone Number">
+                </div>
+
+                <button class="submit-btn" (click)="submitInquiry()">Send Inquiry</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<ng-template #notFound>
+    <div class="order-page">
+        <div class="header-spacer"></div>
+        <div class="not-found">
+            <h2>Product not found</h2>
+            <a routerLink="/notebooks" class="back-link">Back to Collections</a>
+        </div>
+    </div>
+</ng-template>
